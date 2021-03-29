@@ -9,12 +9,24 @@ class Box{
         this.width = width;
         this.height = height;
         World.add(world,this.body);
+        this.image= loadImage("block.png")
     }
     display(){
         var pos = this.body.position;
-        rectMode(CENTER);
-        rect(pos.x,pos.y,this.width,this.height);
-        fill("white");
-    }
+        if(this.body.speed > 3){             
+            World.remove(world, this.body);
+            push();
+            this.Visiblity = this.Visiblity - 5;
+            tint(255,this.Visiblity);   
+            
+            pop()         
+            
+        }
+        else{
+            image(this.image,pos.x,pos.y, 20, 30);
+        }
+          
+        }
+    
     
 }

@@ -1,6 +1,8 @@
 class GreenBox extends Box{
     constructor(x,y){
         super(x,y,20,30);
+        this.Visibility=255;
+        this.image= loadImage("block.png")
     }
 
     display(){
@@ -13,7 +15,7 @@ class GreenBox extends Box{
             push();
             this.Visiblity = this.Visiblity - 5;
             tint(255,this.Visiblity);
-            rect(this.x,this.y, 20, 30);
+            image(this.image,this.x,this.y, 20, 30);
             pop();
           }
         }

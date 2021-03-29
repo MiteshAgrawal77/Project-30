@@ -12,7 +12,7 @@ class Ball{
     display(){
         var pos = this.body.position;
         fill(176, 219, 83);
-        ellipseMode(CENTER);
+        ellipseMode(RADIUS);
         ellipse(pos.x,pos.y,this.radius);
     }
 }
