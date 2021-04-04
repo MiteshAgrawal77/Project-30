@@ -10,6 +10,7 @@ class Box{
         this.height = height;
         World.add(world,this.body);
         this.image= loadImage("block.png")
+        this.visibility = 255;
     }
     display(){
         var pos = this.body.position;
@@ -18,7 +19,7 @@ class Box{
             push();
             this.Visiblity = this.Visiblity - 5;
             tint(255,this.Visiblity);   
-            
+            image(this.image, pos.x,pos.y,20,20)
             pop()         
             
         }
